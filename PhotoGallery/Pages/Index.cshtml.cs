@@ -9,21 +9,19 @@ namespace PhotoGallery.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-        public JsonFilePhotosService PhotoService;
-        public IEnumerable<Photo> Photos { get; private set; }
+        private readonly JsonFilePhotosService photosService;
 
-        public IndexModel(
-            ILogger<IndexModel> logger,
-            JsonFilePhotosService photoService)
+        public IndexModel(JsonFilePhotosService photoService)
         {
-            _logger = logger;
             PhotoService = photoService;
         }
 
+        public IEnumerable<Photo> Photos { get; private set; }
+        public JsonFilePhotosService PhotoService { get; }
+
         public void OnGet()
         {
-            Photos = PhotoService.GetProducts();
+            Photos = photosService.GetProducts();
         }
     }
 }

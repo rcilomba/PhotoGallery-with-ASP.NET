@@ -16,7 +16,7 @@ namespace PhotoGallery.Models
 
         public string? Description{ get; set; }
         public int[]? Ratings { get; set; }
-        public List<Photo> PhotoList { get; internal set; }
+        public List<Photo>? PhotoList { get; internal set; }
 
         public override string ToString() => JsonSerializer.Serialize<Photo>(this);
       

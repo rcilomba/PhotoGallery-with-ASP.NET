@@ -1,20 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PhotoGallery.Services;
+using System.Collections.Generic;
+using PhotoGallery.Models;
+using Microsoft.Extensions.Logging;
 
-namespace PhotoGallery.Pages
+
+
+namespace PhotoGallery.Pages;
+
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    private readonly ILogger<IndexModel> _logger;
+    public JsonFilePhotoService PhotoService;
+    public IEnumerable<Photos> Photos { get; set; }
+
+    public IndexModel(
+        ILogger<IndexModel> logger,
+        JsonFilePhotoService photoService) 
     {
-        private readonly ILogger<IndexModel> _logger;
+        _logger = logger;
+        PhotoService = photoService;
+    }
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
-
-        }
+    public void OnGet()
+    {
+        Photos = PhotoService.GetProducts();
     }
 }

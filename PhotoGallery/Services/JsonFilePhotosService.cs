@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text.Json;
 using PhotoGallery.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace PhotoGallery.Services
 {
-    public class JsonFilePhotoService
+    public class JsonFilePhotosService
     {
-        public JsonFilePhotoService(IWebHostEnvironment webHostEnvironment)
+        public JsonFilePhotosService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
@@ -18,10 +20,10 @@ namespace PhotoGallery.Services
 
         private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json");
 
-        public IEnumerable<Photos> GetProducts()
+        public IEnumerable<Photo> GetProducts()
         {
             using var jsonFileReader = File.OpenText(JsonFileName);
-            return JsonSerializer.Deserialize<Photos[]>(jsonFileReader.ReadToEnd(),
+            return JsonSerializer.Deserialize<Photo[]>(jsonFileReader.ReadToEnd(),
                 new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
@@ -45,7 +47,7 @@ namespace PhotoGallery.Services
 
             using var outputStream = File.OpenWrite(JsonFileName);
 
-            JsonSerializer.Serialize<IEnumerable<Photos>>(
+            JsonSerializer.Serialize<IEnumerable<Photo>>(
                 new Utf8JsonWriter(outputStream, new JsonWriterOptions
                 {
                     SkipValidation = true,

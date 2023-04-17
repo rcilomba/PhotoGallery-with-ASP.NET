@@ -5,26 +5,25 @@ using System.Collections.Generic;
 using PhotoGallery.Models;
 using Microsoft.Extensions.Logging;
 
-
-
-namespace PhotoGallery.Pages;
-
-public class IndexModel : PageModel
+namespace PhotoGallery.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-    public JsonFilePhotoService PhotoService;
-    public IEnumerable<Photos> Photos { get; set; }
-
-    public IndexModel(
-        ILogger<IndexModel> logger,
-        JsonFilePhotoService photoService) 
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-        PhotoService = photoService;
-    }
+        private readonly ILogger<IndexModel> _logger;
+        public JsonFilePhotosService PhotoService;
+        public IEnumerable<Photo> Photos { get; private set; }
 
-    public void OnGet()
-    {
-        Photos = PhotoService.GetProducts();
+        public IndexModel(
+            ILogger<IndexModel> logger,
+            JsonFilePhotosService photoService)
+        {
+            _logger = logger;
+            PhotoService = photoService;
+        }
+
+        public void OnGet()
+        {
+            Photos = PhotoService.GetProducts();
+        }
     }
 }

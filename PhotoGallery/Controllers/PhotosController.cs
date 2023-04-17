@@ -43,15 +43,15 @@ namespace PhotoGallery.Controllers
             return new FileStreamResult(fileStream, "image/jpeg");
         }
 
-        private List<Photos> GetPhotosFromJsonFile()
+        private List<Photo> GetPhotosFromJsonFile()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "db.json");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "photos.json");
             var json = System.IO.File.ReadAllText(filePath);
-            var photos = JsonSerializer.Deserialize<Photos>(json);
+            var photos = JsonSerializer.Deserialize<Photo>(json);
             return photos.PhotoList;
         }
 
-        private Photos GetPhotoByIdFromJsonFile(string id)
+        private Photo GetPhotoByIdFromJsonFile(string id)
         {
             var photos = GetPhotosFromJsonFile();
             var photo = photos.FirstOrDefault(p => p.Id == id);

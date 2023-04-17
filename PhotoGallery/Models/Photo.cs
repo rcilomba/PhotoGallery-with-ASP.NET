@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace PhotoGallery.Models
 {
-    public class Photos
+    public class Photo
     {
         public string? Id { get; set; }
 
@@ -16,8 +16,9 @@ namespace PhotoGallery.Models
 
         public string? Description{ get; set; }
         public int[]? Ratings { get; set; }
+        public List<Photo> PhotoList { get; internal set; }
 
-        public override string ToString() => JsonSerializer.Serialize<Photos>(this);
+        public override string ToString() => JsonSerializer.Serialize<Photo>(this);
       
     }
 }

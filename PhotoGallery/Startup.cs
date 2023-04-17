@@ -21,7 +21,7 @@ namespace PhotoGallery
             services.AddServerSideBlazor();
             services.AddHttpClient();
             services.AddControllers();
-            services.AddTransient<JsonFilePhotoService>();
+            services.AddTransient<JsonFilePhotosService>();
             
         }
 

@@ -2,6 +2,8 @@
 using PhotoGallery.Models;
 using PhotoGallery.Pages;
 using System.Text.Json;
+using PhotoGallery.Services;
+
 
 namespace PhotoGallery.Controllers
 {

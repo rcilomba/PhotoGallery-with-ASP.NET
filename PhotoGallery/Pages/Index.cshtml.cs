@@ -7,20 +7,24 @@ using Microsoft.Extensions.Logging;
 
 namespace PhotoGallery.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel: PageModel
     {
+
         private readonly ILogger<IndexModel> _logger;
+        public JsonFileProductService ProductService;
+        public IEnumerator<Product> Prodcuts { get; private set; }
+
 
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {
-            _logger = logger;
-            ProductService = productService;
+        _logger = logger;
         }
-
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<Product>? Products { get; private set; }
-
-        public void OnGet() => Products = ProductService.GetProducts();
+        
+        public void OnGet()
+        {
+            Products = ProductService.GetProducts();
+        }
     }
 }
+

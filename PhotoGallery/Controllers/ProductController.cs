@@ -12,13 +12,13 @@ namespace PhotoGallery.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        public ProductsController(Pages.JsonFileProductService productService) =>
+        public ProductsController(Pages.JsonFilePhotoService productService) =>
             ProductService = productService;
 
-        public Pages.JsonFileProductService ProductService { get; }
+        public Pages.JsonFilePhotoService ProductService { get; }
 
         [HttpGet]
-        public IEnumerable<Product> Get() => ProductService.GetProducts();
+        public IEnumerable<Photo> Get() => ProductService.GetProducts();
 
         [HttpPatch]
         public ActionResult Patch([FromBody] RatingRequest request)

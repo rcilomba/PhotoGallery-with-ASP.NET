@@ -9,9 +9,10 @@ using PhotoGallery.Services;
 
 namespace PhotoGallery.Services
 {
-    public class JsonFileProductService
+    public class JsonFilePhotoService
+
     {
-        public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
+        public JsonFilePhotoService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnviroment = webHostEnvironment;
         }
@@ -21,11 +22,11 @@ namespace PhotoGallery.Services
         {
             get { return Path.Combine(WebHostEnviroment.WebRootPath, "data", "photos.json"); }
         }
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<Photo> GetProducts()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
-                return JsonSerializer.Deserialize<Product[]>(jsonFileReader.ReadToEnd(),
+                return JsonSerializer.Deserialize<Photo[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true

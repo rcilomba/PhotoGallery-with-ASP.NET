@@ -13,14 +13,14 @@ namespace PhotoGallery.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public JsonFileProductService ProductService;
-        public IEnumerable<Product> Products { get; set; }
+        public JsonFilePhotoService ProductService;
+        public IEnumerable<Photo> Products { get; set; }
 
 
 
         public IndexModel(
             ILogger<IndexModel> logger,
-            JsonFileProductService productService)
+            JsonFilePhotoService productService)
         {
             _logger = logger;
             ProductService = productService;

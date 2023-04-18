@@ -27,7 +27,8 @@ namespace PhotoGallery
             services.AddScoped<IJsonFilePhotosService, JsonFilePhotosService>();
 
             //Register the JsonFilePhotoService
-            services.AddTransient<JsonFilePhotosService>();
+            services.AddSingleton<JsonFilePhotosService>();
+
 
 
             // Configure the PhotoGallery.Services namespace

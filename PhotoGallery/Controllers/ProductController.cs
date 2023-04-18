@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using PhotoGallery.Models;
 using PhotoGallery.Pages;
 using System.Text.Json;
@@ -11,10 +12,10 @@ namespace PhotoGallery.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        public ProductsController(JsonFileProductService productService) =>
+        public ProductsController(Pages.JsonFileProductService productService) =>
             ProductService = productService;
 
-        public JsonFileProductService ProductService { get; }
+        public Pages.JsonFileProductService ProductService { get; }
 
         [HttpGet]
         public IEnumerable<Product> Get() => ProductService.GetProducts();

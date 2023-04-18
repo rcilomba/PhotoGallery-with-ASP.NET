@@ -1,6 +1,6 @@
-﻿namespace PhotoGallery.Pages
-{
-    public class IndexModel
-    {
-    }
-}
+﻿//namespace PhotoGallery.Pages
+//{
+//    public class IndexModel
+//    {
+//    }
+//}

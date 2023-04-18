@@ -13,16 +13,14 @@ namespace PhotoGallery.Services
     {
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
-            WebHostEnvironment = webHostEnvironment;
+            WebHostEnviroment = webHostEnvironment;
         }
 
-        public IWebHostEnvironment WebHostEnvironment { get; }
-
+        public IWebHostEnvironment WebHostEnviroment { get; }
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
+            get { return Path.Combine(WebHostEnviroment.WebRootPath, "data", "photos.json"); }
         }
-
         public IEnumerable<Product> GetProducts()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))

@@ -4,7 +4,11 @@
     "img": "",
     "Url": "/Photos/1.jpg",
     "Title": "Vegas",
-    "Description": "A moment in Vegas"
+    "Description": "A moment in Vegas",
+    "Ratings": [
+      5,
+      5
+    ]
   },
 
   {
@@ -12,7 +16,8 @@
     "img": "",
     "Url": "/Photos/2.jpg",
     "Title": "Nala",
-    "Description": "Nala on my phone and on my laptop"
+    "Description": "Nala on my phone and on my laptop",
+    "Ratings": null
   },
 
   {
@@ -20,7 +25,8 @@
     "img": "",
     "Url": "/Photos/3.jpg",
     "Title": "Sunny day",
-    "Description": "Sunny day at the beach in Santa Monica"
+    "Description": "Sunny day at the beach in Santa Monica",
+    "Ratings": null
   },
 
   {
@@ -28,7 +34,8 @@
     "img": "",
     "Url": "/Photos/4.jpg",
     "Title": "Vegas",
-    "Description": "Las Vegas"
+    "Description": "Las Vegas",
+    "Ratings": null
   },
 
   {
@@ -36,7 +43,8 @@
     "img": "",
     "Url": "/Photos/5.jpg",
     "Title": "Basketball Time-Out",
-    "Description": "Time Out in basketball"
+    "Description": "Time Out in basketball",
+    "Ratings": null
   },
 
   {
@@ -44,7 +52,8 @@
     "img": "",
     "Url": "/Photos/6.jpg",
     "Title": "Sunset",
-    "Description": "Sunset in Jönköping"
+    "Description": "Sunset in Jönköping",
+    "Ratings": null
   },
 
   {
@@ -52,7 +61,8 @@
     "img": "",
     "Url": "/Photos/7.jpg",
     "Title": "Viksjö",
-    "Description": "Nice water in Viksjö"
+    "Description": "Nice water in Viksjö",
+    "Ratings": null
   },
 
   {
@@ -60,7 +70,8 @@
     "img": "",
     "Url": "/Photos/8.jpg",
     "Title": "Ladybug",
-    "Description": "Just a tiny ladybug"
+    "Description": "Just a tiny ladybug",
+    "Ratings": null
   },
 
   {
@@ -68,7 +79,8 @@
     "img": "",
     "Url": "/Photos/9.jpg",
     "Title": "Cupcake",
-    "Description": "A couple of cupecakes"
+    "Description": "A couple of cupecakes",
+    "Ratings": null
   },
 
   {
@@ -76,7 +88,8 @@
     "img": "",
     "Url": "/Photos/10.jpg",
     "Title": "Wedding",
-    "Description": "A man's wedding ring'"
+    "Description": "A man's wedding ring'",
+    "Ratings": null
   },
 
   {
@@ -84,7 +97,8 @@
     "img": "",
     "Url": "/Photos/11.jpg",
     "Title": "Wedding",
-    "Description": "Married couple"
+    "Description": "Married couple",
+    "Ratings": null
   },
 
   {
@@ -92,7 +106,8 @@
     "img": "",
     "Url": "/Photos/12.jpg",
     "Title": "Cake",
-    "Description": "Lovely cake"
+    "Description": "Lovely cake",
+    "Ratings": null
   },
 
   {
@@ -100,7 +115,8 @@
     "img": "",
     "Url": "/Photos/13.jpg",
     "Title": "Bride and bridesmades",
-    "Description": "The bride and her bridesmades"
+    "Description": "The bride and her bridesmades",
+    "Ratings": null
   },
 
   {
@@ -108,7 +124,8 @@
     "img": "",
     "Url": "/Photos/14.jpg",
     "Title": "Sunrise",
-    "Description": "Sunrise in Stockholm"
+    "Description": "Sunrise in Stockholm",
+    "Ratings": null
   },
 
   {
@@ -116,7 +133,8 @@
     "img": "",
     "Url": "/Photos/14.jpg",
     "Title": "Møns Klint",
-    "Description": "Water over Møns Klint"
+
+    "Ratings": null
   }
 ]
 

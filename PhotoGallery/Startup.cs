@@ -24,9 +24,8 @@ namespace PhotoGallery
             services.AddHttpClient();
             services.AddControllers();
 
-            services.AddScoped<IJsonFilePhotosService, JsonFilePhotosService>();
-
-
+            //services.AddScoped<IJsonFilePhotosService, JsonFilePhotosService>();
+            services.AddScoped<JsonFilePhotosService>();
 
 
             //Register the JsonFilePhotoService

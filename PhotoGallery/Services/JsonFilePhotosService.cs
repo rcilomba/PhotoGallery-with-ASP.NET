@@ -12,7 +12,6 @@ namespace PhotoGallery.Services
     public interface IJsonFilePhotosService
     {
         IEnumerable<Photo> GetPhotos();
-        Photo GetPhoto(string id);
     }
     public class JsonFilePhotosService : IJsonFilePhotosService
     {
@@ -25,19 +24,21 @@ namespace PhotoGallery.Services
 
         private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "photos.json");
 
-        public IEnumerable<Photo> GetProducts()
+        public IEnumerable<Photo> GetPhotos()
         {
             using var jsonFileReader = File.OpenText(JsonFileName);
-            return JsonSerializer.Deserialize<Photo[]>(jsonFileReader.ReadToEnd(),
-                new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            return JsonSerializer.Deserialize<IEnumerable<Photo>>(jsonFileReader.ReadToEnd(), options);
         }
+
+
         //rating
         public void AddRating(string productId, int rating)
         {
-            var products = GetProducts();
+            var products = GetPhotos();
 
             if (products.First(x => x.Id == productId).Ratings == null)
             {

@@ -9,7 +9,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PhotoGallery.Services
 {
-    public class JsonFilePhotosService
+    public interface IJsonFilePhotosService
+    {
+        IEnumerable<Photo> GetPhotos();
+        Photo GetPhoto(string id);
+    }
+    public class JsonFilePhotosService : IJsonFilePhotosService
     {
         public JsonFilePhotosService(IWebHostEnvironment webHostEnvironment)
         {

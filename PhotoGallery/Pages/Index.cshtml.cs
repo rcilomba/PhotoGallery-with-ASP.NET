@@ -11,11 +11,11 @@ namespace PhotoGallery.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly JsonFilePhotosService _photoService;
+        private readonly JsonFilePhotosService photoService;
 
         public IndexModel(JsonFilePhotosService photoService)
         {
-            PhotoService = photoService;
+            this.photoService = photoService;
         }
 
 
@@ -23,7 +23,7 @@ namespace PhotoGallery.Pages
 
         public void OnGet()
         {
-            Photos = PhotoService.GetPhotos();
+            Photos = photoService.GetPhotos();
         }
 
     }

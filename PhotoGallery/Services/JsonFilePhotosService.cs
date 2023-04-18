@@ -18,7 +18,7 @@ namespace PhotoGallery.Services
 
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json");
+        private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "photos.json");
 
         public IEnumerable<Photo> GetProducts()
         {

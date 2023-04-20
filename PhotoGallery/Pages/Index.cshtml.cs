@@ -30,7 +30,7 @@ namespace PhotoGallery.Pages
 
         public void OnGet()
         {
-            Photos = PhotoService.GetProducts();
+            Photos = PhotoService.GetPhotos();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace PhotoGallery.Services
         {
             get { return Path.Combine(WebHostEnviroment.WebRootPath, "data", "photos.json"); }
         }
-        public IEnumerable<Photo> GetProducts()
+        public IEnumerable<Photo> GetPhotos()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {

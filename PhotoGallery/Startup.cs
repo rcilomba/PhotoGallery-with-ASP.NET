@@ -65,6 +65,7 @@ namespace PhotoGallery
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
+                endpoints.MapBlazorHub();
                 /*endpoints.MapGet("/photos", (context) =>
                 {
                     var photos = app.ApplicationServices.GetService<JsonFilePhotoService>().GetProducts();

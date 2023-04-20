@@ -19,7 +19,7 @@ namespace PhotoGallery.Controllers
         [HttpGet]
         public IEnumerable<Photo> Get()
         {
-            return PhotoService.GetProducts();
+            return PhotoService.GetPhotos();
         }
 
 

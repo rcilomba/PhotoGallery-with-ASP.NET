@@ -22,13 +22,43 @@
     }
 </div>
 
+
+    @if (selectedPhoto != null)
+    {
+        <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="pTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="photoTitle">@selectedPhoto.Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-img" style="background-image: url('@selectedPhoto.Image');">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">@selectedPhoto.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
 @code {
-    Photo selectPhoto;
-    string selectPhotoId;
+    Photo selectedPhoto;
+    string selectedPhotoId;
 
     void SelectPhoto(string photoId)
     {
-        selectPhotoId = photoId;
-        selectPhoto = PhotoService.GetPhotos().First(x => x.Id == photoId);
+        selectedPhotoId = photoId;
+        selectedPhoto = PhotoService.GetPhotos().First(x => x.Id == photoId);
     }
 }

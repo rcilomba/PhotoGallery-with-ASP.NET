@@ -28,6 +28,13 @@ namespace PhotoGallery
             services.AddHttpClient();
             services.AddControllers();
 
+            //chat
+            services.AddControllersWithViews();
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/Photos/Index", "photos");
+            });
+
             // Configure the PhotoGallery.Services namespace
             services.AddSingleton<IFileProvider>(
   new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
@@ -72,6 +79,12 @@ namespace PhotoGallery
                     var json = JsonSerializer.Serialize<IEnumerable<Photo>>(photos);
                     return context.Response.WriteAsync(json);
                 }); */
+
+                //chat
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "api/{controller=Home}/{action=Index}/{id?}"
+                    );
             });
         }
     }

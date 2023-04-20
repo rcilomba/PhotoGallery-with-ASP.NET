@@ -1,6 +1,15 @@
 ﻿@page
 @using PhotoGallery.Components
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop
 @model IndexModel
+@inject IJSRuntime JSRuntime
+
 @{
     ViewData["Title"] = "Home page";
 }
@@ -27,4 +36,6 @@
 
 @(await Html.RenderComponentAsync<PhotoList>(RenderMode.ServerPrerendered))
 
-<script src="_framework/blazor.server.js"></script>
+<script src="/_framework/blazor.server.js"></script>
+
+

@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
+using System.Text.Json;
+using PhotoGallery.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace PhotoGallery
 {
@@ -62,7 +65,12 @@ namespace PhotoGallery
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
-                endpoints.MapBlazorHub();
+                /*endpoints.MapGet("/photos", (context) =>
+                {
+                    var photos = app.ApplicationServices.GetService<JsonFilePhotoService>().GetProducts();
+                    var json = JsonSerializer.Serialize<IEnumerable<Photo>>(photos);
+                    return context.Response.WriteAsync(json);
+                }); */
             });
         }
     }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Merriweather:wght@300&family=Montserrat:wght@300&family=Mulish:wght@200;500&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap');
+
 .checked {
     color: orange;
 }
@@ -8,18 +10,18 @@
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-.card-columns .card:hover .card-img {
+.card-row .card:hover .card-img {
     opacity: 1;
     -webkit-transform-style: preserve-3d;
 }
 
-.card-columns .card-body {
+.card-row .card-body {
     height: 100px;
     font-family: 'Nunito', sans-serif;
     background: #fbfafd;
 }
 
-.card-columns .card-img {
+.card-row .card-img {
     height: 330px;
     vertical-align: bottom;
     background-position: center; /* Center the image */
@@ -36,7 +38,7 @@ for details on configuring this project to bundle and minify static web assets. 
     background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.card-columns .card:hover {
+.card-row .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
 }
@@ -48,7 +50,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 a.navbar-brand {
     white-space: normal;
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Capriola', cursive;
     font-size: xx-large;
     text-align: center;
     word-break: break-all;
@@ -140,10 +142,10 @@ ul {
 }
 /*Backgrounds*/
 .bg-navbar {
-    background: -webkit-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: -o-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: -moz-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
+    background: -webkit-linear-gradient(110deg, #6ad988 60%, #1f7d1a 60%);
+    background: -o-linear-gradient(110deg, #6ad988 60%, #1f7d1a 60%);
+    background: -moz-linear-gradient(110deg, #6ad988 60%, #1f7d1a 60%);
+    background: linear-gradient(110deg, #6ad988 60%, #1f7d1a 60%);
 }
 
 .bg-footer {

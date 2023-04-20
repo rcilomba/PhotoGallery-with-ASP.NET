@@ -23,6 +23,7 @@ namespace PhotoGallery
         {
 
             services.AddRazorPages();
+            services.AddServerSideBlazor();
             services.AddTransient<JsonFilePhotoService>();
             services.AddServerSideBlazor();
             services.AddHttpClient();
@@ -30,10 +31,6 @@ namespace PhotoGallery
 
             //chat
             services.AddControllersWithViews();
-            services.AddMvc().AddRazorPagesOptions(options =>
-            {
-                options.Conventions.AddPageRoute("/Photos/Index", "photos");
-            });
 
             // Configure the PhotoGallery.Services namespace
             services.AddSingleton<IFileProvider>(
@@ -42,7 +39,7 @@ namespace PhotoGallery
             // Configure the PhotoGallery.Models namespace
             services.AddMvc().AddRazorPagesOptions(options =>
             {
-                options.Conventions.AddPageRoute("/Index", "");
+                options.Conventions.AddPageRoute("/Index", "photos");
             });
 
         }
@@ -56,7 +53,7 @@ namespace PhotoGallery
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }

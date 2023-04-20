@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // Register the JsonFilePhotosService and use IWebHostEnvironment
-builder.Services.AddSingleton<IJsonFilePhotosService>(provider => new JsonFilePhotosService(provider.GetRequiredService<IWebHostEnvironment>()));
+builder.Services.AddSingleton<JsonFilePhotoService>(provider => new JsonFilePhotoService(provider.GetRequiredService<IWebHostEnvironment>()));
 
 var app = builder.Build();
 

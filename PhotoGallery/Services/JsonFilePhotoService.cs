@@ -10,7 +10,6 @@ using PhotoGallery.Services;
 namespace PhotoGallery.Services
 {
     public class JsonFilePhotoService
-
     {
         public JsonFilePhotoService(IWebHostEnvironment webHostEnvironment)
         {

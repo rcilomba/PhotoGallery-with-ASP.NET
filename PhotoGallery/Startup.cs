@@ -20,6 +20,7 @@ namespace PhotoGallery
         {
 
             services.AddRazorPages();
+            services.AddTransient<JsonFilePhotoService>();
             services.AddServerSideBlazor();
             services.AddHttpClient();
             services.AddControllers();

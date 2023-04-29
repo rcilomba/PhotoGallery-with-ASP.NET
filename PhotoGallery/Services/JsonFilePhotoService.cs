@@ -37,7 +37,7 @@ namespace PhotoGallery.Services
         {
             var photos = GetPhotos();
 
-            //LINQ
+            //LINQ 
             var query = photos.First(x => x.Id == photoId);
             
             if(query.Ratings == null)
@@ -46,12 +46,12 @@ namespace PhotoGallery.Services
             }
             else
             {
-                var ratings = query.Ratings.ToList();
-                ratings.Add(rating);
+                var ratings = query.Ratings.ToList();  //convert them to a list
+                ratings.Add(rating); // sedan lägger den till ratins
                  query.Ratings = ratings.ToArray();
             }
 
-            using(var outputStream = File.OpenWrite(JsonFileName))
+            using(var outputStream = File.OpenWrite(JsonFileName)) // open that file
             {
                 JsonSerializer.Serialize <IEnumerable< Photo>>(
                      new Utf8JsonWriter(outputStream, new JsonWriterOptions

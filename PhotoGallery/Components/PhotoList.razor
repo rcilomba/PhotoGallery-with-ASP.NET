@@ -16,14 +16,14 @@
     @foreach (var photo in PhotoService.GetPhotos())
     {
         <div class="card">
-            <div class="card-img" style="background-image: url('@photo.Url');"></div>
+            <div class="card-img" style="background-image: url('@photo.Image');"></div>
             <div class="card-body">
                 <h5 class="card-title">@photo.Title</h5>
             </div>
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                <button @onclick="(e => SelectPhoto(photo.Id))"
+                <button @onclick="(e => SelectPhoto(photo?.Id ?? string.Empty))"
                     data-toggle="modal" data-target="#photoModal" class="btn btn-primary">
                     More info
                 </button>
@@ -31,9 +31,6 @@
         </div>
     }
 </div>
-
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @if (selectedPhoto != null)
 {
@@ -61,6 +58,7 @@
         </div>
     </div>
 }
+
 
 
 

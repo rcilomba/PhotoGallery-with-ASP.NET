@@ -22,6 +22,15 @@ namespace PhotoGallery.Controllers
             return PhotoService.GetPhotos();
         }
 
+        [Route("Rate")]
+        [HttpGet]
+        public ActionResult Get(
+            [FromQuery]string PhotoId, 
+            [FromQuery] int Rating)
+        {
+            PhotoService.AddRating(PhotoId, Rating);
+            return Ok();
+        }
 
     }
 }

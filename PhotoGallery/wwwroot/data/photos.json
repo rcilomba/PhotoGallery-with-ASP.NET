@@ -1,142 +1,140 @@
 [
   {
     "Id": "1",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/1.jpg",
     "Url": "/Photos/1.jpg",
     "Title": "Vegas",
     "Description": "A moment in Vegas",
     "Ratings": [
       5,
-      5
+      4
     ]
   },
-
   {
     "Id": "2",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/2.jpg",
     "Url": "/Photos/2.jpg",
     "Title": "Nala",
     "Description": "Nala on my phone and on my laptop",
     "Ratings": null
   },
-
   {
     "Id": "3",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/3.jpg",
     "Url": "/Photos/3.jpg",
     "Title": "Sunny day",
     "Description": "Sunny day at the beach in Santa Monica",
     "Ratings": null
   },
-
   {
     "Id": "4",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/4.jpg",
     "Url": "/Photos/4.jpg",
     "Title": "Vegas",
     "Description": "Las Vegas",
     "Ratings": null
   },
-
   {
     "Id": "5",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/5.jpg",
     "Url": "/Photos/5.jpg",
     "Title": "Basketball Time-Out",
     "Description": "Time Out in basketball",
     "Ratings": null
   },
-
   {
     "Id": "6",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/6.jpg",
     "Url": "/Photos/6.jpg",
     "Title": "Sunset",
-    "Description": "Sunset in Jönköping",
+    "Description": "Sunset in J\u00F6nk\u00F6ping",
     "Ratings": null
   },
-
   {
     "Id": "7",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/7.jpg",
     "Url": "/Photos/7.jpg",
-    "Title": "Viksjö",
-    "Description": "Nice water in Viksjö",
+    "Title": "Viksj\u00F6",
+    "Description": "Nice water in Viksj\u00F6",
     "Ratings": null
   },
-
   {
     "Id": "8",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/8.jpg",
     "Url": "/Photos/8.jpg",
     "Title": "Ladybug",
     "Description": "Just a tiny ladybug",
     "Ratings": null
   },
-
   {
     "Id": "9",
-    "img": "",
+    "Maker": null,
+    "img": "Photos/9.jpg",
     "Url": "/Photos/9.jpg",
     "Title": "Cupcake",
     "Description": "A couple of cupecakes",
     "Ratings": null
   },
-
   {
     "Id": "10",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/10.jpg",
     "Url": "/Photos/10.jpg",
     "Title": "Wedding",
-    "Description": "A man's wedding ring'",
+    "Description": "A man\u0027s wedding ring\u0027",
     "Ratings": null
   },
-
   {
     "Id": "11",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/11.jpg",
     "Url": "/Photos/11.jpg",
     "Title": "Wedding",
     "Description": "Married couple",
     "Ratings": null
   },
-
   {
     "Id": "12",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/12.jpg",
     "Url": "/Photos/12.jpg",
     "Title": "Cake",
     "Description": "Lovely cake",
     "Ratings": null
   },
-
   {
     "Id": "13",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/13.jpg",
     "Url": "/Photos/13.jpg",
     "Title": "Bride and bridesmades",
     "Description": "The bride and her bridesmades",
     "Ratings": null
   },
-
   {
     "Id": "14",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/14.jpg",
     "Url": "/Photos/14.jpg",
     "Title": "Sunrise",
     "Description": "Sunrise in Stockholm",
     "Ratings": null
   },
-
   {
     "Id": "15",
-    "img": "",
+    "Maker": null,
+    "img": "/Photos/15.jpg",
     "Url": "/Photos/15.jpg",
-    "Title": "Møns Klint",
-
+    "Title": "M\u00F8ns Klint",
+    "Description": null,
     "Ratings": null
   }
 ]
-
-
-

@@ -30,16 +30,7 @@ namespace PhotoGallery
 
 
 
-            // Configure the PhotoGallery.Services namespace
-            services.AddSingleton<IFileProvider>(
-  new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
-
-            // Configure the PhotoGallery.Models namespace
-            services.AddMvc().AddRazorPagesOptions(options =>
-            {
-                options.Conventions.AddPageRoute("/Index", "photos");
-            });
-
+      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +49,6 @@ namespace PhotoGallery
 
             // 404 blazor.server.js
             app.UseStaticFiles();
-            //
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

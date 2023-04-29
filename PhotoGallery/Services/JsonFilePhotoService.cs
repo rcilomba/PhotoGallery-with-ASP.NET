@@ -32,5 +32,37 @@ namespace PhotoGallery.Services
                     });
             }
         }
+
+        public void AddRating(string photoId, int rating)
+        {
+            var photos = GetPhotos();
+
+            //LINQ
+            var query = photos.First(x => x.Id == photoId);
+            
+            if(query.Ratings == null)
+            {
+                query.Ratings = new int[] {rating };
+            }
+            else
+            {
+                var ratings = query.Ratings.ToList();
+                ratings.Add(rating);
+                 query.Ratings = ratings.ToArray();
+            }
+
+            using(var outputStream = File.OpenWrite(JsonFileName))
+            {
+                JsonSerializer.Serialize <IEnumerable< Photo>>(
+                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                     {
+                         SkipValidation= true,
+                         Indented=true,
+                     }),
+                        photos 
+                );
+            }
+
+        }
     }
 }

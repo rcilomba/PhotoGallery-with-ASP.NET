@@ -16,18 +16,18 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .card-row .card-body {
-    height: 100px;
+    height: 70px;
     font-family: 'Nunito', sans-serif;
     background: #fbfafd;
 }
 
 .card-row .card-img {
-    height: 330px;
+    height: 600px;
     vertical-align: bottom;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    opacity: .8;
+    opacity: .7;
 }
 
 .modal .card-img {
@@ -93,6 +93,7 @@ html {
 
 .border-top {
     border-top: 1px solid #e5e5e5;
+    background-color: red;
 }
 
 .border-bottom {

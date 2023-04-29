@@ -26,12 +26,9 @@ namespace PhotoGallery.Pages
             PhotoService = photoService;
         }
 
- 
 
-        public void OnGet()
-        {
-            Photos = PhotoService.GetPhotos();
-        }
+
+        public void OnGet() => Photos = PhotoService.GetPhotos();
+        
     }
 }
-

@@ -17,17 +17,18 @@
 <div class="text-center">
     <h1 class="display-4">Photo Gallery</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Hello, world! The time on the server is @DateTime.Now</p>
 </div>
 
 
 @*<div class="card-row">
 @foreach (var photo in Model.Photos)
 {
-  <div class="card"> 
+  <div class="card">
       <div class="card-img" style="background-image: url('@photo.Url');"></div>
       <div class="card-body">
                 <h5 class="card-title">@photo.Title</h5>
-                
+
       </div>
 
     </div>
@@ -36,8 +37,5 @@
 
 @(await Html.RenderComponentAsync<PhotoList>(RenderMode.ServerPrerendered))
 
-@*<script src="/_framework/blazor.server.js"></script>*@
 <script src="_framework/blazor.server.js"></script>
-
-
 

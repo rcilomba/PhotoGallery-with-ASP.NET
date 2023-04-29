@@ -24,13 +24,11 @@ namespace PhotoGallery
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddTransient<JsonFilePhotoService>();
-            services.AddServerSideBlazor();
             services.AddHttpClient();
             services.AddControllers();
+            services.AddTransient<JsonFilePhotoService>();
 
-            //chat
-            services.AddControllersWithViews();
+
 
             // Configure the PhotoGallery.Services namespace
             services.AddSingleton<IFileProvider>(
@@ -58,6 +56,10 @@ namespace PhotoGallery
                 app.UseHsts();
             }
 
+            // 404 blazor.server.js
+            app.UseStaticFiles();
+            //
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -70,18 +72,16 @@ namespace PhotoGallery
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
-                /*endpoints.MapGet("/photos", (context) =>
-                {
-                    var photos = app.ApplicationServices.GetService<JsonFilePhotoService>().GetProducts();
-                    var json = JsonSerializer.Serialize<IEnumerable<Photo>>(photos);
-                    return context.Response.WriteAsync(json);
-                }); */
 
-                //chat
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "api/{controller=Home}/{action=Index}/{id?}"
-                    );
+
+                // endpoints.MapGet("/photos", (context) =>
+               // {
+                //    var photos = app.ApplicationServices.GetService<JsonFilePhotoService>().GetPhotos();
+                  //  var json = JsonSerializer.Serialize<IEnumerable<Photo>>(photos);
+                 //   return context.Response.WriteAsync(json);
+               // }); 
+
+              
             });
         }
     }

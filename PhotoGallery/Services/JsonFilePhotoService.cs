@@ -17,20 +17,18 @@ namespace PhotoGallery.Services
         }
 
         public IWebHostEnvironment WebHostEnviroment { get; }
-        private string JsonFileName
-        {
-            get { return Path.Combine(WebHostEnviroment.WebRootPath, "data", "photos.json"); }
-        }
+        private string JsonFileName => Path.Combine(WebHostEnviroment.WebRootPath, "data", "photos.json"); 
+        
         public IEnumerable<Photo> GetPhotos()
         {
-            using (var jsonFileReader = File.OpenText(JsonFileName))
-            {
+            using var jsonFileReader = File.OpenText(JsonFileName);
+            
                 return JsonSerializer.Deserialize<Photo[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
-            }
+            
         }
 
         public void AddRating(string photoId, int rating)
@@ -53,11 +51,11 @@ namespace PhotoGallery.Services
 
             using(var outputStream = File.OpenWrite(JsonFileName)) // open that file
             {
-                JsonSerializer.Serialize <IEnumerable< Photo>>(
+                JsonSerializer.Serialize <IEnumerable<Photo>>(
                      new Utf8JsonWriter(outputStream, new JsonWriterOptions
                      {
-                         SkipValidation= true,
-                         Indented=true,
+                         SkipValidation = true,
+                         Indented = true,
                      }),
                         photos 
                 );

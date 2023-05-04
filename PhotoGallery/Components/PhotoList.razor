@@ -23,14 +23,16 @@
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                    <button @onclick="(e => SelectPhoto(photo?.Id ?? string.Empty))"
-                         class="btn btn-primary">
-                        More info
-                    </button>
+                <button @onclick="(e => SelectPhoto(photo?.Id ?? string.Empty))"
+                    data-toggle="modal" data-target="#photoModal" class="btn btn-primary">
+                    More info
+                </button>
             </small>
         </div>
     }
 </div>
+
+
 
 @if (selectedPhoto != null)
 {
@@ -39,10 +41,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="photoTitle">@selectedPhoto.Title</h5>
-                    <button type="button" class="close" @onclick="() => selectedPhoto = null" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-</button>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="card">
@@ -60,11 +61,11 @@
     </div>
 }
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
 
 
 @code {
-    
+
 
     Photo? selectedPhoto;
     string? selectedPhotoId;
@@ -73,15 +74,18 @@
     {
         selectedPhotoId = photoId;
         selectedPhoto = PhotoService.GetPhotos().First(x => x.Id == photoId);
+        System.Diagnostics.Debug.WriteLine($"Mindaugas says selected photo is: {selectedPhoto.Title}");
+
+
     }
 
     int currentRating = 0;
     int voteCount = 0;
-    string voteLabel;
+    string? voteLabel;
 
     void GetCurrentRating()
     {
-        if (selectedPhoto.Ratings == null)
+        if (selectedPhoto?.Ratings == null)
         {
             currentRating = 0;
             voteCount = 0;
@@ -92,6 +96,6 @@
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
             currentRating = selectedPhoto.Ratings.Sum() / voteCount;
         }
-        Console.WriteLine($"Current rating for {selectedPhoto.Id}: {currentRating}");
+        Console.WriteLine($"Current rating for {selectedPhoto?.Id}: {currentRating}");
     }
 }

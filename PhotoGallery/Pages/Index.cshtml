@@ -11,17 +11,19 @@
 @inject IJSRuntime JSRuntime
 
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Photo by Ramma";
 }
 
 <div class="text-center">
     <h1 class="display-4">Photo Gallery</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>Hello, world! The time on the server is @DateTime.Now</p>
+    <p>Hello everybody! The time on the server is @DateTime.Now</p>
 </div>
 
 
 @(await Html.RenderComponentAsync<PhotoList>(RenderMode.ServerPrerendered))
 
+@*
+     should work but not working*@
 <script src="_framework/blazor.server.js"></script>
 

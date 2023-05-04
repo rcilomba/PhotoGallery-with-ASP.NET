@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Shared\nrfou5kx.0hz~" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\_framework\" />
     <Folder Include="wwwroot\Photos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
 </Project>

@@ -63,8 +63,8 @@ a {
 
 .btn-primary {
     color: #fff;
-    background-color: #252152;
-    border-color: #252152;
+    background-color: #5dbea3;
+    border-color: #5dbea3;
 }
 
     .btn-primary:hover {
@@ -93,7 +93,7 @@ html {
 
 .border-top {
     border-top: 1px solid #e5e5e5;
-    background-color: red;
+    background-color: #5dbea3;
 }
 
 .border-bottom {

@@ -27,7 +27,7 @@ namespace PhotoGallery.Services
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
-                    });
+                    }) ?? Enumerable.Empty<Photo>();
             
         }
 
@@ -45,13 +45,13 @@ namespace PhotoGallery.Services
             else
             {
                 var ratings = query.Ratings.ToList();  //convert them to a list
-                ratings.Add(rating); // sedan lägger den till ratins
+                ratings.Add(rating); // sedan lägger den till ratings
                  query.Ratings = ratings.ToArray();
             }
 
-            using(var outputStream = File.OpenWrite(JsonFileName)) // open that file
-            {
-                JsonSerializer.Serialize <IEnumerable<Photo>>(
+            using var outputStream = File.OpenWrite(JsonFileName); // open that file
+            
+                JsonSerializer.Serialize<IEnumerable<Photo>>(
                      new Utf8JsonWriter(outputStream, new JsonWriterOptions
                      {
                          SkipValidation = true,
@@ -59,7 +59,7 @@ namespace PhotoGallery.Services
                      }),
                         photos 
                 );
-            }
+            
 
         }
     }

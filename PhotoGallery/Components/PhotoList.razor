@@ -10,7 +10,6 @@
 @using Microsoft.JSInterop
 @inject JsonFilePhotoService PhotoService
 
-<PageTitle>Photo Gallery</PageTitle>
 
 <div class="card-row">
     @foreach (var photo in PhotoService.GetPhotos())
@@ -34,13 +33,12 @@
 
 
 
-@if (selectedPhoto != null)
-{
+
     <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
+        
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="photoTitle">@selectedPhoto.Title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -57,9 +55,10 @@
                 <div class="modal-footer">
                 </div>
             </div>
+        
         </div>
     </div>
-}
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
 
@@ -75,6 +74,7 @@
         selectedPhotoId = photoId;
         selectedPhoto = PhotoService.GetPhotos().First(x => x.Id == photoId);
         System.Diagnostics.Debug.WriteLine($"Mindaugas says selected photo is: {selectedPhoto.Title}");
+        StateHasChanged();
 
 
     }

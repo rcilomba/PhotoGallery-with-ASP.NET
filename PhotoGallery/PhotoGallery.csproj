@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\_framework\" />
+    <Folder Include="wwwroot\_framework\" />
     <Folder Include="wwwroot\Photos\" />
   </ItemGroup>
 

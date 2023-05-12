@@ -33,34 +33,35 @@
 
 
 
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
 
-    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('@selectedPhoto.Image');">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">@selectedPhoto.Description</p>
-                        </div>
+@if(@selectedPhoto != null) 
+{
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                   @*<div class="card-img" style="background-image: url('@selectedPhoto.Image');">
+                    </div>*@
+                    <div class="card-body">
+                        <p class="card-text">@selectedPhoto.Description</p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                </div>
             </div>
-        
+            <div class="modal-footer">
+            </div>
         </div>
+        }
     </div>
+</div>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 @code {

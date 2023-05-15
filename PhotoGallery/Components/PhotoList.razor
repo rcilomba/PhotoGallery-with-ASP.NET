@@ -32,12 +32,12 @@
 </div>
 
 
-
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-
 @if(@selectedPhoto != null) 
 {
+
+
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -46,8 +46,8 @@
             </div>
             <div class="modal-body">
                 <div class="card">
-                   @*<div class="card-img" style="background-image: url('@selectedPhoto.Image');">
-                    </div>*@
+                   <div class="card-img" style="background-image: url('@selectedPhoto.Image');">
+                    </div>
                     <div class="card-body">
                         <p class="card-text">@selectedPhoto.Description</p>
                     </div>

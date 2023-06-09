@@ -8,7 +8,6 @@
     cursor: pointer;
 }
 
-/*TEST*/
 
 span {
     font-family: 'Nunito', sans-serif;
@@ -20,9 +19,6 @@ span {
 }
 
 
-
-
-/*TEST*/
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-row .card:hover .card-img {

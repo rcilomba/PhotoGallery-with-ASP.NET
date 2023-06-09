@@ -148,17 +148,10 @@ body {
     margin-bottom: 60px;
 }
 
-p {
+p, h1, ul {
     font-family: 'Nunito', sans-serif;
 }
 
-h1 {
-    font-family: 'Nunito', sans-serif;
-}
-
-ul {
-    font-family: 'Nunito', sans-serif;
-}
 
 .footer {
     position: absolute;

@@ -5,11 +5,8 @@
     "img": "/Photos/1.jpg",
     "Url": "/Photos/1.jpg",
     "Title": "Vegas Casino",
-    "Description": "A moment in Vegas",
-    "Ratings": [
-      5,
-      4
-    ]
+    "Description": "A moment in Vegas"
+    
   },
   {
     "Id": "2",
@@ -17,8 +14,7 @@
     "img": "/Photos/2.jpg",
     "Url": "/Photos/2.jpg",
     "Title": "Nala",
-    "Description": "Nala on my phone and on my laptop",
-    "Ratings": null
+    "Description": "Nala on my phone and on my laptop"
   },
   {
     "Id": "3",
@@ -26,8 +22,7 @@
     "img": "/Photos/3.jpg",
     "Url": "/Photos/3.jpg",
     "Title": "Sunny day",
-    "Description": "Sunny day at the beach in Santa Monica",
-    "Ratings": null
+    "Description": "Sunny day at the beach in Santa Monica"
   },
   {
     "Id": "4",
@@ -35,8 +30,7 @@
     "img": "/Photos/4.jpg",
     "Url": "/Photos/4.jpg",
     "Title": "Vegas",
-    "Description": "Las Vegas",
-    "Ratings": null
+    "Description": "Las Vegas"
   },
   {
     "Id": "5",
@@ -44,8 +38,7 @@
     "img": "/Photos/5.jpg",
     "Url": "/Photos/5.jpg",
     "Title": "Basketball Time-Out",
-    "Description": "Time Out in basketball",
-    "Ratings": null
+    "Description": "Time Out in basketball"
   },
   {
     "Id": "6",
@@ -53,7 +46,6 @@
     "img": "/Photos/6.jpg",
     "Url": "/Photos/6.jpg",
     "Title": "Sunset",
-    "Description": "Sunset in J\u00F6nk\u00F6ping",
     "Ratings": null
   },
   {
@@ -62,8 +54,7 @@
     "img": "/Photos/7.jpg",
     "Url": "/Photos/7.jpg",
     "Title": "Viksj\u00F6",
-    "Description": "Nice water in Viksj\u00F6",
-    "Ratings": null
+    "Description": "Nice water in Viksj\u00F6"
   },
   {
     "Id": "8",
@@ -71,8 +62,7 @@
     "img": "/Photos/8.jpg",
     "Url": "/Photos/8.jpg",
     "Title": "Ladybug",
-    "Description": "Just a tiny ladybug",
-    "Ratings": null
+    "Description": "Just a tiny ladybug"
   },
   {
     "Id": "9",
@@ -80,8 +70,7 @@
     "img": "Photos/9.jpg",
     "Url": "/Photos/9.jpg",
     "Title": "Cupcake",
-    "Description": "A couple of cupcakes",
-    "Ratings": null
+    "Description": "A couple of cupcakes"
   },
   {
     "Id": "10",
@@ -89,8 +78,7 @@
     "img": "/Photos/10.jpg",
     "Url": "/Photos/10.jpg",
     "Title": "Wedding",
-    "Description": "A man\u0027s wedding ring\u0027",
-    "Ratings": null
+    "Description": "A man\u0027s wedding ring\u0027"
   },
   {
     "Id": "11",
@@ -98,8 +86,7 @@
     "img": "/Photos/11.jpg",
     "Url": "/Photos/11.jpg",
     "Title": "Wedding love",
-    "Description": "Married couple",
-    "Ratings": null
+    "Description": "Married couple"
   },
   {
     "Id": "12",
@@ -107,8 +94,7 @@
     "img": "/Photos/12.jpg",
     "Url": "/Photos/12.jpg",
     "Title": "Cake",
-    "Description": "Lovely cake",
-    "Ratings": null
+    "Description": "Lovely cake"
   },
   {
     "Id": "13",
@@ -116,8 +102,7 @@
     "img": "/Photos/13.jpg",
     "Url": "/Photos/13.jpg",
     "Title": "Bride and bridesmades",
-    "Description": "The bride and her bridesmades",
-    "Ratings": null
+    "Description": "The bride and her bridesmades"
   },
   {
     "Id": "14",
@@ -125,8 +110,7 @@
     "img": "/Photos/14.jpg",
     "Url": "/Photos/14.jpg",
     "Title": "Sunrise",
-    "Description": "Sunrise in Stockholm",
-    "Ratings": null
+    "Description": "Sunrise in Stockholm"
   },
   {
     "Id": "15",
@@ -134,7 +118,6 @@
     "img": "/Photos/15.jpg",
     "Url": "/Photos/15.jpg",
     "Title": "M\u00F8ns Klint",
-    "Description": "Water and stones in M\u00F8ns Klint",
-    "Ratings": null
+    "Description": "Water and stones in M\u00F8ns Klint"
   }
 ]

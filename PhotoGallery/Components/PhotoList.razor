@@ -32,8 +32,7 @@
 </div>
 
 
-@*<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">*@
+
 @if (@selectedPhoto != null)
 {
 
@@ -42,51 +41,28 @@
         <div class="modal-header">
                     <h2 class="card-text">@selectedPhoto.Title</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="CloseModal" >
-                @*<span aria-hidden="true">&times;</span>*@
             </button>
         </div>
         <div class="modal-body">
-            @*<div class="card">*@
                 <div class="card-img" style="background-image: url('@selectedPhoto.Image');">
                 </div>
                 <div class="card-body">
-                    @*<p class="card-text">@selectedPhoto.Description</p>*@
                     <img src="@selectedPhoto.Image" alt="@selectedPhoto.Description">
                     <p class="card-text">@selectedPhoto.Description</p>
 
-                    @if (voteCount == 0)
-                    {
-                        <span>You can vote!</span>
-                    }
-                    else
-                    {
-                        <span>@voteCount @voteLabel</span>
-                    }
-                    @for(int i = 1; i < 6; i++)
-                    {
-                        var currentStar = i;
-                        if( i <= currentRating)
-                        {
-                            <span class="fa fa-star checked"></span>
-                        }
-                    }
+                  
                 </div>
             </div>
         </div>
         <div class="modal-footer">
-           @* @if(voteCount == 0)
-            {
-                <span>You can vote!</span>
-            }*@
+           
         </div>
         </div>
-    @*</div>*@
 }
-@*</div>
-</div>
-*@
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 @code {
@@ -100,7 +76,7 @@
         selectedPhotoId = photoId;
         selectedPhoto = PhotoService.GetPhotos().First(x => x.Id == photoId);
         System.Diagnostics.Debug.WriteLine($"Mindaugas says selected photo is: {selectedPhoto.Title}");
-        StateHasChanged();
+        //StateHasChanged();
 
 
     }
@@ -112,23 +88,6 @@
     }
 
 
-    int currentRating = 0;
-    int voteCount = 0;
-    string? voteLabel;
-
-    void GetCurrentRating()
-    {
-        if (selectedPhoto?.Ratings == null)
-        {
-            currentRating = 0;
-            voteCount = 0;
-        }
-        else
-        {
-            voteCount = selectedPhoto.Ratings.Count();
-            voteLabel = voteCount > 1 ? "Votes" : "Vote";
-            currentRating = selectedPhoto.Ratings.Sum() / voteCount;
-        }
-        Console.WriteLine($"Current rating for {selectedPhoto?.Id}: {currentRating}");
-    }
+  
 }
+

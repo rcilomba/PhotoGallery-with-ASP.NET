@@ -5408,9 +5408,9 @@ textarea.form-control-lg {
 }
 
 .modal {
-  position: fixed;
+ /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0;*/
   z-index: 1055;
   display: none;
   width: 100%;
@@ -5421,10 +5421,14 @@ textarea.form-control-lg {
 }
 
 .modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 0.5rem;
-  pointer-events: none;
+    /*position: relative;*/
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
 }
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
@@ -5460,16 +5464,18 @@ textarea.form-control-lg {
 }
 
 .modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
+    /*  position: absolute;
+  top: 0;
+    left: 0;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
 
 .modal-backdrop {

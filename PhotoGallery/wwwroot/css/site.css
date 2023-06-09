@@ -10,11 +10,15 @@
 
 /*TEST*/
 
-
+span {
+    font-family: 'Nunito', sans-serif;
+}
 
 .card-body img{
     width: 100%;
+    margin-bottom: 20px;
 }
+
 
 
 
@@ -55,7 +59,6 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .card-footer {
-    /*background: #fbfafd;*/
     background-color: #ffffff;
 }
 
@@ -90,6 +93,22 @@ a {
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+
+
+
+.modal-dialog.modal-dialog-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
 
 /* Sticky footer styles
 -------------------------------------------------- */

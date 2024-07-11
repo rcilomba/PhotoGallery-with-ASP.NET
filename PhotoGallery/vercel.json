@@ -1,15 +1,18 @@
-﻿{
+{
   "version": 2,
   "builds": [
     {
-      "src": "PhotoGallery-with-ASP.NET/**/*.csproj",
-      "use": "@vercel/dotnet"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "PhotoGallery-with-ASP.NET/$1"
+      "dest": "/$1"
     }
   ]
 }
